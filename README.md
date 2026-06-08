@@ -36,3 +36,14 @@
 
 &#x20;  cd twse-stock-api-mvp
 
+## 🚀 快速開始
+
+### 執行步驟
+* **範本一：個股檢索測試 (單股)**
+  ```bash
+  node index.js
+
+Bash
+# 可於後方帶入多個空白分隔的股票代碼
+node multi.js 2317 2646 2881
+
