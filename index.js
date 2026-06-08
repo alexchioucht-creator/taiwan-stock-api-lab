@@ -47,3 +47,4 @@ async function fetchStockPrice(targetCode) {
 
 // 執行測試：此處以「台積電 (2330)」作為 MVP 驗證標的
 fetchStockPrice("2330");
+fetchStockPrice("2303");
