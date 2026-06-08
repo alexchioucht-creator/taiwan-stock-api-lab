@@ -1,9 +1,8 @@
 /**
  * 臺灣證券交易所 (TWSE) OpenAPI 介接測試 MVP - 多股收集版
  */
-
-// 證交所開放平台備用網址（JSON 格式）
-const TWSE_API_URL = "https://data.twse.com.tw/opendata/api/v1/exchangeReport/STOCK_DAY_AVG_ALL?format=json";
+// 換回原本 index.js 使用的、確定能在 Codespaces 跑通的主網域網址
+const TWSE_API_URL = "https://openapi.twse.com.tw/v1/exchangeReport/STOCK_DAY_AVG_ALL";
 
 async function fetchMultipleStocks(targetCodes) {
     console.log(`📡 [LAB] 正在從臺灣證券交易所撈取當日盤後資料...`);
