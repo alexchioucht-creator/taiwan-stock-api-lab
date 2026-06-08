@@ -1,8 +1,9 @@
 /**
  * 臺灣證券交易所 (TWSE) OpenAPI 介接測試 MVP - 多股收集版
  */
-// 替換原本的證交所網址，改用不擋機房 IP 的 FinMind 公開 API
-const TWSE_API_URL = "https://api.finmindtrade.com/v4/data?dataset=TaiwanStockPriceTick";
+
+// 證交所開放平台備用網址（JSON 格式）
+const TWSE_API_URL = "https://data.twse.com.tw/opendata/api/v1/exchangeReport/STOCK_DAY_AVG_ALL?format=json";
 
 async function fetchMultipleStocks(targetCodes) {
     console.log(`📡 [LAB] 正在從臺灣證券交易所撈取當日盤後資料...`);
