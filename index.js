@@ -45,6 +45,17 @@ async function fetchStockPrice(targetCode) {
     }
 }
 
-// 執行測試：此處以「台積電 (2330)」作為 MVP 驗證標的
-fetchStockPrice("2330");
-fetchStockPrice("2303");
+// ========================================================
+// 替換原本最底部的 fetchStockPrice("2330");
+// 改為以下動態參數寫法：
+// ========================================================
+
+// process.argv[2] 可以抓到你在終端機 node index.js 後面帶的第一個空格參數
+const inputCode = process.argv[2];
+
+if (!inputCode) {
+    console.log("💡 [提示] 您未輸入股票代碼，預設為您查詢台積電 (2330)：");
+    fetchStockPrice("2330");
+} else {
+    fetchStockPrice(inputCode);
+}
